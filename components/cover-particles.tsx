@@ -24,34 +24,79 @@ const CoverParticles = () => {
   if (!init) return null;
 
   return (
+    init && 
+    <div className="w-[0px]">
     <Particles
-      id="tsparticles"
-      particlesLoaded={particlesLoaded}
-      options={{
-        background: {
-          color: {
-            value: "#0d47a1",
-          },
-        },
-        fpsLimit: 120,
-        particles: {
-          number: {
-            value: 50,
-          },
-          color: {
-            value: "#ffffff",
-          },
-          links: {
-            enable: true,
-            color: "#ffffff",
-          },
-          move: {
-            enable: true,
-            speed: 2,
-          },
-        },
-      }}
-    />
+            id="tsparticles"
+            particlesLoaded={particlesLoaded}
+            options={{
+                
+                fpsLimit: 120,
+                interactivity: {
+                    events: {
+                        onClick: {
+                            enable: true,
+                            mode: "push",
+                        },
+                        onHover: {
+                            enable: true,
+                            mode: "repulse",
+                        },
+                         
+                    },
+                    modes: {
+                        push: {
+                            quantity: 4,
+                        },
+                        repulse: {
+                            distance: 200,
+                            duration: 0.4,
+                        },
+                    },
+                },
+                particles: {
+                    color: {
+                        value: "#ffffff",
+                    },
+                    links: {
+                        color: "#ffffff",
+                        distance: 150,
+                        enable: true,
+                        opacity: 0.5,
+                        width: 1,
+                    },
+                    move: {
+                        direction: "none",
+                        enable: true,
+                        outModes: {
+                            default: "bounce",
+                        },
+                        random: false,
+                        speed: 0.5,
+                        straight: false,
+                    },
+                    number: {
+                        density: {
+                            enable: true,
+                            
+                        },
+                        value: 80,
+                    },
+                    opacity: {
+                        value: 0.5,
+                    },
+                    shape: {
+                        type: "circle",
+                    },
+                    size: {
+                        value: { min: 1, max: 5 },
+                    },
+                },
+                detectRetina: true,
+            }}
+        />
+
+        </div>
   );
 };
 

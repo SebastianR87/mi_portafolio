@@ -1,22 +1,31 @@
 @import "tailwindcss";
 
-
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* 🔥 Tus colores personalizados */
+  --color-secondary: #f5741c;
+  --color-darkBg: #131424;
+
+  /* 🔥 Tu gradiente personalizado */
+  --background-image-gradient-cover:
+    linear-gradient(
+      90.21deg,
+      rgba(170, 54, 124, 0.5) -5.91%,
+      rgba(74, 47, 189, 0.5) 111.58%
+    );
 }
 
 html, body {
-  color: #Fff;
-  background: #1f1934 ;
+  color: #fff;
+  background: #1f1934;
 }
 
-main{
-  background: #393a47 ;
+main {
+  background: #393a47;
   height: 100vh;
   height: 100dvh;
 }
-
